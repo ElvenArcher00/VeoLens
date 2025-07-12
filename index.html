@@ -1,135 +1,40 @@
 <!DOCTYPE html>
-
 <html lang="en">
-
   <head>
-
-    <meta charset="UTF-8">
-
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>VeoLens</title>
 
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com "></script>
+
     <style>
-
+      /* Optional: Ensure iframe covers full screen on mobile */
+      html,
       body {
-
         margin: 0;
-
         padding: 0;
-
-        font-family: Arial, sans-serif;
-
-        height: 100vh;
-
-        display: flex;
-
-        justify-content: center;
-
-        align-items: center;
-
-      }
-
-      .content {
-
-        width: 100%;
-
         height: 100%;
-
-        background-color: white;
-
-        display: flex;
-
-        justify-content: center;
-
-        align-items: center;
-
-        margin-top: -285px;
-
+        overflow: hidden;
       }
-
-      iframe {
-
-        width: 100%;
-
-        height: 100%;
-
-        border: none;
-
-      }
-
-      @media (max-width: 768px) {
-
-        body {
-
-          align-items: flex-start;
-
-        }
-
-        .content {
-
-          margin-top: -70px;
-
-        }
-
-      }
-
-      @media (max-width: 600px) {
-
-        body {
-
-          align-items: flex-start;
-
-        }
-
-        .content {
-
-          margin-top: -70px;
-
-        }
-
-      }
-
-      @media (max-width: 480px) {
-
-        body {
-
-          align-items: flex-start;
-
-        }
-
-        .content {
-
-          margin-top: -70px;
-
-        }
-
-      }
-
     </style>
-
   </head>
-
-  <body>
-
-    <div class="content">
-
-      <iframe id="myIframe"></iframe>
-
+  <body class="w-full h-full">
+    <div class="w-full h-screen overflow-hidden">
+      <iframe
+        id="myIframe"
+        title="VeoLens Embedded"
+        class="w-full h-full border-none"
+        allow="camera; microphone; fullscreen"
+      >
+      </iframe>
     </div>
 
     <script>
-
-      document.addEventListener("DOMContentLoaded", function() {
-
-        var iframe = document.getElementById("myIframe");
-
-        iframe.src = "https://veolens-10000154.chipp.ai";
-
+      document.addEventListener("DOMContentLoaded", function () {
+        const iframe = document.getElementById("myIframe");
+        iframe.src = "https://veolens-10000154.chipp.ai ";
       });
-
     </script>
-
   </body>
-
 </html>
